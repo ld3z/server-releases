@@ -12,6 +12,9 @@ const iconsToGenerate = {
     'paperclip',
     'check-mark-button'
   ],
+  mdi: [
+    'paperclip'
+  ]
 };
 
 // 2. LOGIC TO GENERATE THE SCSS FILE
