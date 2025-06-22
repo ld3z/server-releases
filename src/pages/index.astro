@@ -17,7 +17,7 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 					<li class="post">
 						<div class="version_wrapper">
 							<div class="version_info">
-								<a href={`/releases/${post.id}`}>
+								<a href={`${import.meta.env.BASE_URL}releases/${post.id}`}>
 									<div class="version_number">{post.data.versionNumber}</div>
 									<FormattedDate class="date" date={post.data.date} />
 								</a>
