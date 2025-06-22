@@ -20,7 +20,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
+      - name: Generate icons
+        run: |
+          npm run icons
+      - name: Build and deploy site
         uses: withastro/action@v3
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)

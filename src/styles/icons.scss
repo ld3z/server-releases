@@ -1,0 +1,42 @@
+// Use the modern module system. This loads the generated file
+// and makes its variables available under the 'generated-icons' namespace.
+@use "generated-icons";
+@use "sass:map";
+@use "sass:list";
+
+// List the collections that contain multi-color icons.
+$multi-color-collections: (
+  "twemoji"
+);
+
+// Base styles for all icons.
+.emoji {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// Loop through the $icons map from the loaded module.
+@each $collection, $names in generated-icons.$icons {
+  @each $name, $data in $names {
+    // Use the namespaced map.get() function.
+    $encoded-svg-string: map.get($data, "encoded-svg");
+    $data-uri: url("data:image/svg+xml,#{$encoded-svg-string}");
+
+    .i-#{$collection}-#{$name} {
+      // Use the namespaced list.index() function.
+      @if list.index($multi-color-collections, $collection) {
+        // Multi-color emoji (e.g., twemoji)
+        background-image: #{$data-uri};
+        background-color: transparent;
+      } @else {
+        // Single-color icon (e.g., carbon)
+        mask-image: #{$data-uri};
+        background-color: currentColor;
+      }
+    }
+  }
+}
