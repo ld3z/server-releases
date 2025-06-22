@@ -17,6 +17,10 @@ $multi-color-collections: (
   height: 1.2em;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  // + Define a default color for monochromatic icons using a CSS variable.
+  //   You can change this default value to whatever you like.
+  --icon-color: rgb(136, 136, 136); // A sensible dark gray
 }
 
 // Loop through the $icons map from the loaded module.
@@ -35,7 +39,10 @@ $multi-color-collections: (
       } @else {
         // Single-color icon (e.g., carbon)
         mask-image: #{$data-uri};
-        background-color: currentColor;
+        // -> Change from 'currentColor' to use the CSS variable.
+        //    This tells the browser: "Use the --icon-color variable. If it's not set,
+        //    fall back to using the text color (currentColor)."
+        background-color: var(--icon-color, currentColor);
       }
     }
   }
