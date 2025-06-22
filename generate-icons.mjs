@@ -10,7 +10,8 @@ const iconsToGenerate = {
     'grinning-face',
     'eyes',
     'paperclip',
-    'check-mark-button'
+    'check-mark-button',
+    'party-popper'
   ],
   mdi: [
     'paperclip'
