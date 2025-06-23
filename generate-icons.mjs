@@ -11,7 +11,8 @@ const iconsToGenerate = {
     'eyes',
     'paperclip',
     'check-mark-button',
-    'party-popper'
+    'party-popper',
+    'person-facepalming'
   ],
   mdi: [
     'paperclip'
