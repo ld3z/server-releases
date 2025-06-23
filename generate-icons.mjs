@@ -15,7 +15,13 @@ const iconsToGenerate = {
     'person-facepalming'
   ],
   mdi: [
-    'paperclip'
+    'paperclip',
+    'github',
+    'twitter',
+    'email'
+  ],
+  'simple-icons' : [
+    'discord'
   ]
 };
 
