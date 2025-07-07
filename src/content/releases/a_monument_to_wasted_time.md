@@ -21,3 +21,5 @@ I walk through the silent streets of our abandoned metropolis and see not the tr
 This world was supposed to be for us. Now, it's just for me. A museum of memories and a stark reminder that some things, no matter how much effort you pour into them, are destined to be abandoned.
 
 So, here it stands. A digital graveyard. A testament to friendships that drifted apart and the folly of investing time in castles made of sand.
+
+of course, a modded server is indev, so maybe people will play that, but probably not...
