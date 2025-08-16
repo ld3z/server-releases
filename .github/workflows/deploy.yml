@@ -29,16 +29,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm' # or 'pnpm', 'yarn'
+          cache: 'pnpm' # or 'npm', 'yarn'
 
       - name: Install dependencies
-        run: npm ci # 'ci' is faster and safer for CI/CD
+        run: pnpm ci # 'ci' is faster and safer for CI/CD
 
       - name: Generate icons
-        run: npm run icons
+        run: pnpm run icons
 
       - name: Build your site
-        run: npm run build # Assumes your build script is 'npm run build'
+        run: pnpm run build # Assumes your build script is 'npm run build'
 
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
