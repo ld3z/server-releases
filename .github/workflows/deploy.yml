@@ -37,7 +37,7 @@ jobs:
           cache: 'pnpm' # or 'npm', 'yarn'
 
       - name: Install dependencies
-        run: pnpm ci # 'ci' is faster and safer for CI/CD
+        run: pnpm install
 
       - name: Generate icons
         run: pnpm run icons
