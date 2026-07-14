@@ -41,8 +41,8 @@ for (const collection in iconsToGenerate) {
   const iconsJsonPath = path.resolve(process.cwd(), 'node_modules', '@iconify-json', collection, 'icons.json');
   const infoJsonPath = path.resolve(process.cwd(), 'node_modules', '@iconify-json', collection, 'info.json');
 
-  const { default: iconSet } = await import(pathToFileURL(iconsJsonPath).href, { assert: { type: 'json' } });
-  const { default: collectionInfo } = await import(pathToFileURL(infoJsonPath).href, { assert: { type: 'json' } });
+  const { default: iconSet } = await import(pathToFileURL(iconsJsonPath).href, { with: { type: 'json' } });
+  const { default: collectionInfo } = await import(pathToFileURL(infoJsonPath).href, { with: { type: 'json' } });
 
   // --- THIS IS THE FINAL FIX ---
   // Get the default dimensions from info.json
